@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <header>
-
+        <SignOut/>
       </header>
       <section>
         {user ? <ChatRoom /> : <SignIn />}
