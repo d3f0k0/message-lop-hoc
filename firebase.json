@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "nhantin-lophoc",
     "public": "build",
     "ignore": [
       "firebase.json",
