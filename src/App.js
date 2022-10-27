@@ -9,13 +9,13 @@ import {useAuthState} from 'react-firebase-hooks/auth';
 import {useCollectionData} from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
-  apiKey: "AIzaSyA0V1VCNJRgLEugV6i4QK6QEO9-5S7hPTU",
-  authDomain: "quan-li-lop-hoc.firebaseapp.com",
-  projectId: "quan-li-lop-hoc",
-  storageBucket: "quan-li-lop-hoc.appspot.com",
-  messagingSenderId: "167112990969",
-  appId: "1:167112990969:web:0830bcdbd20e30fb908228",
-  measurementId: "G-ZW992GQ34E"
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MESSAGING_SENDER_ID
 })
 
 const auth = firebase.auth()
@@ -27,6 +27,7 @@ function App() {
   return (
     <div className="App">
       <header>
+        <h1></h1>
         <SignOut/>
       </header>
       <section>
@@ -43,7 +44,7 @@ function SignIn() {
   }
 
   return (
-    <button onClick={signInWithGoogle}> Google login </button>
+    <button onClick={signInWithGoogle}>  </button>
   )  
 }
 function SignOut() {
